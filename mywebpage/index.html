@@ -1,123 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- Добавим атрибут lang для элемента html, чтобы скринридер мог нормально всё читать -->
 
-<!-- так в HTML обозначаются комментарии. Выше вы видите объявление типа документа (DOCTYPE), так браузер понимает, что код ниже нужно интерпретировать как html -->
-
-<html>
-
-<!-- зона заголовка html, тег <title> - строка, которую браузер отображает на вкладках над страницами, <meta> и <link> сообщают технические сведения для браузера, например, что файл имеет кодировку Юникод (utf-8) -->
-
+<html lang="ru">
 	<head>
-		<title>Личная страница Веры Кузнецовой</title>
-	 	<!-- Required meta tags -->
-	 	<meta charset="utf-8">
-	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<meta name="description" content="Личная страница и контакты">
-
-		<!-- Bootstrap Core CSS -->
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<!-- Эта страница сделана с помощью bootstrap - популярной библиотеки для создания и настройки сайтов. Ниже вы увидите, что многие теги содержат атрибуты class - bootstrap содержит шаблоны, как такие элементы красиво оформить -->
-
-	</head>
+		<title>Привет! Я Алла</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-<!-- body - главная, содержательная часть страницы. Контент на этой странице делится на меню (nav), "шапку" (header), "подвал" (footer) и все остальное (мы заключили остаток в тег section) -->	
+<!-- Сделаем веселое описание -->
+		<meta name="description" content="(Почти) всё об Алле Гордеевой">
+	
+<!-- Еще добавим красивый шрифт из Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<!-- Подключим Bootstrap (не самый новый, но все-таки) -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	
+	</head>
 	<body>
-
-<!-- меню (navigation bar) -->
-
-		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-
-<!-- div - это контейнеры - коробочки с текстом и/или графикой, которые можно вкладывать друг в друга. Пристально смотреть на теги в этой части кода не нужно -->
+	<style>
+		body {
+			font-family: "Lora", serif; color:rgb(30, 49, 6);
+		 	background-color: #ECECEC
+        	}
+    </style>
+    
+	
+<!-- Не меняем страницу группы и курса, как просили -->
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom" style="background-color:#D9D7B9">
 			<div class="container"> 
 				<div class="navbar-header"> 
-					<a href="https://ling.hse.ru/" class="navbar-brand">Школа лингвистики НИУ ВШЭ</a> 
+					<a href="https://ling.hse.ru/" class="navbar-brand" style="color:rgb(38, 55, 17)">Школа лингвистики НИУ ВШЭ</a> 
 				</div> 
-				<nav class="collapse navbar-collapse" id="bs-navbar"> 
 					<ul class="nav navbar-nav navbar-right"> 
-						<li> <a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2021/index.html">Страница курса</a> </li> 
-						<li> <a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2021/latin_2.html">Страница группы</a> </li> 
-<!-- поправьте номер группы в URL, если нужно (от 1 до 4) -->
+						<li> <a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2021/index.html" style="color:rgb(38, 55, 17)">Страница курса</a> </li> 
+						<li> <a href="https://lingvocodes.github.io/HSEinfo/ba-ling-2021/latin_2.html" style="color:rgb(38, 55, 17)">Страница группы</a> </li> 
 					</ul>
-				</nav> 
 			</div>
 		</nav>
+		
+<!-- Теперь самое интересное -->
+<div class="container mt-4">
+        <div class="row">
+            <div class="col-4 col-xs-12 d-flex justify-content-start">
+                <img src="myphoto.jpg" class="rounded float-start" width="100%" height="100%" alt="Das bin ich!">
+            </div>
 
-<!-- начинается шапка. у тега header есть атрибут style, который задает цвет фона и отступы. поменяйте значения атрибутов и посмотрите, как изменится страница -->
+            <div class="col-8 col-xs-12">
+                <h1>Алла Гордеева</h1>
+                <p>Девочка, <b>которая выжила</b> после выполнения <s>домашнего задания</s></p>
+ 
+				<hr class="hr-circle">
+ 
+				<style>
+				.hr-circle {
+					margin: 20px 0;
+					padding: 0;
+					height: 0;
+					border: none;
+					border-width: 0 0 5px;
+					border-style: solid;
+					border-image: url("circle.jpg") 0 0 100% repeat;
+					background-position: 50%;
+					box-sizing: border-box;
+			
+				}
+				</style>
+				
+				<h3>Что и насколько я люблю</h3>
+				<ul class="list-group">
+  					<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:#D9D7B9">
+    					Твин Пикс
+    					<span class="badge bg-primary rounded-pill" style="color:white">100</span>
+  					</li>
+  					<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:white">
+    					Путешествовать (с Дубаем отдельная любовь)
+    					<span class="badge bg-primary rounded-pill" style="color:white">80</span>
+  					</li>
+  					<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:#D9D7B9">
+    					Элтона Джона
+    					<span class="badge bg-primary rounded-pill" style="color:white">70</span>
+  					</li>
+  					<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color:white">
+    					Учить языки
+    					<span class="badge bg-primary rounded-pill" style="color:white">50</span>
+  					</li>
+				</ul>
+  			</div>
+		</div>		
+</div>
 
-		<header style="background-color:plum; padding-top:70px; "> 
-			<div class="container"> 
-				<div class="row">
-					<div class="col-md-4">
-						<br><br>
-<!-- здесь и дальше нужно поменять весь содержательный текст, чтобы получилась ваша личная страница -->
-						<h1>Вера Кузнецова</h1>
-						<hr> <!-- это горизонтальная линия -->
-						<p><i>Человек, умеющий <b>создавать</i> HTML</b></p> 
-					</div>
-					<div class="col-md-4">
-<!-- img - тег для вставки изображений. Мы использовали атрибут style, чтобы задать размер изображения и ширину рамки-->
-<!-- Измените URL на URL вашей фотографии, а также настройте размер изображения -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Petrus_Christus_-_Portrait_of_a_Young_Woman_-_Google_Art_Project.jpg/368px-Petrus_Christus_-_Portrait_of_a_Young_Woman_-_Google_Art_Project.jpg" style="height:320px; margin:20px 20px 40px 20px; " >
-					</div>
-				</div>
-			</div>
-		</header>
 
-<!-- часть страницы, которая под шапкой -->
-		<section id="portfolio">
-			<div class="container">
-
-<!-- атрибут col-md-... говорит, что контент будет разделен на несколько столбцов, их ширина соотносится как 3 - 6 - 3 (Bootstrap использует воображаемую сетку из 12 равных по ширине колонок) -->
-				<div class="col-md-3">
-
-<!-- <article> не влияет на оформление, но помогает структурировать контент на осмысленые разделы -->
-					<article>
-						<h3>Место учебы</h3>
-						<p>Фундаментальная и прикладная лингвистика, НИУ ВШЭ, Москва</p>
-					</article>
-					<article>
-						<h3>Родной город</h3>
-						<p>Новосибирск</p>
-					</article>
-					<article>
-						<h3>Школа</h3>
-<!-- когда будете менять текст, не используйте бюрократических слов типа ГБОУ СОШ, ну пожаалуйста -->
-						<p>СУНЦ НГУ</p>
-					</article>
-				</div>
-
-				<div class="col-md-6">
-					<article>
-						<h3>Тут можно написать</h3>
-						<p>Еще много много много много много много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						много <br>
-						всего о себе</p>
-					</article>
-				</div>
-
-				<div class="col-md-3">
-					<h3>Я в соцсетях</h3>
-<!-- тег <ul> - unordered list. Еще бывает тег <ol> -->
-					<ul>
-						<li>VK</li>
-						<li>Discord</li>
-						<li>Telegram</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-<!-- это подвал. В этой части страницы обычно ставят копирайт (с помощью символа &copy;) и пишут об истории создания страницы. Поставьте свой копирайт -->
-		<footer class="bs-docs-footer"> 
-			<div class="container"> 
-				<p style="text-align:right; ">&copy; В. Кузнецова, 2024</p> 
-			</div>
-		</footer>
-	</body>
+<div class="container mt-4 bg-light rounded p-4">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center pb-4">
+                <h1>Еще про меня</h1>
+            </div>
+        </div>
+	<div class="row align-items-center">
+    	<div class="col">
+    		<p align="center"><h3>Где я живу</h3></p>
+    		<p style="font-size: medium;">Сейчас обитаю <b>в Москве</b>, но родилась <b>в Чехове</b> и все детство провела <b>в Мытищах</b>.<br>Очень хочу снова повидать Чехов и поймать вайб!</p>
+   		</div>
+   		
+    	<div class="col">
+     		<p align="center"><h3>Где я учусь</h3></p>
+     		<p style="font-size: medium;">Много где! Сначала в <b>Лицее Вышки,</b> потом <b>в самой Вышке на филологии</b> и вот оказалась <b>на ФИКЛе</b>, чему безгранично рада!</p>
+    	</div>
+    	
+    	<div class="col">
+			<p align="center"><h3>Где мне можно написать</h3></p>
+			<p style="font-size: medium;">Тоже много где!</p>
+		
+			<ul>
+  				<li><a href="https://t.me/goraaldeeva">В Телеге</a></li>
+  				<li><a href="https://vk.com/gracefall_al">Вконтакте</a></li>
+  				<li><i>На почту: akgordeeva@edu.hse.ru</i></li>
+			</ul>
+    	</div>
+	</div>
+</div>
+<div class="container mt-4 bg-light rounded p-4">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center pb-4">
+                <h1>Мои любимые места</h1>
+            </div>
+        </div>
+        
+		<div class="row align-items-center">
+    		<div class="col">
+    			<p align="center">Это Дубай</p>
+   			</div>
+   		
+    		<div class="col">
+     			<p align="center">Это Москва</p>
+    		</div>
+    	
+    		<div class="col" >
+				<p align="center">А это Питер</p>
+    		</div>
+		</div>
+	
+	<p>
+    	<img src="dubai.jpg" alt="Фотография 1" width="420" height="420">
+    	<img src="moscow.jpg" alt="Фотография 2" width="420" height="420">
+    	<img src="peter.jpg" alt="Фотография 3" width="420" height="420">
+    <p>
+</div>
+</body>
 </html>
+		
